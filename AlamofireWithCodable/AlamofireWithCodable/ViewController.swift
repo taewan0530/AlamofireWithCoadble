@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // A Type
+        // import Alamofire 필요함
+        Router.restaurant.responseCodable { (response: DataResponse<Model.Restaurant>) in
+            
+        }
+        
+        // B Type
+        // import Alamofire 필요 없음
+        Router.restaurant.responseCodable(Model.Restaurant.self) { response in
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		79CDAD5641485E66C05A3029 /* Pods_AlamofireWithCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856687389FBB8FA378600DF /* Pods_AlamofireWithCodable.framework */; };
+		A142960C1FD59ADA00244701 /* Router+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14296081FD59ADA00244701 /* Router+Extension.swift */; };
+		A142960D1FD59ADA00244701 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14296091FD59ADA00244701 /* Router.swift */; };
+		A142960E1FD59ADA00244701 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142960B1FD59ADA00244701 /* Model.swift */; };
 		A17D5D091FD58DDE00402D0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17D5D081FD58DDE00402D0B /* AppDelegate.swift */; };
 		A17D5D0B1FD58DDE00402D0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17D5D0A1FD58DDE00402D0B /* ViewController.swift */; };
 		A17D5D0E1FD58DDE00402D0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17D5D0C1FD58DDE00402D0B /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		615214EB93E16106C1AAAF50 /* Pods-AlamofireWithCodable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireWithCodable.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireWithCodable/Pods-AlamofireWithCodable.release.xcconfig"; sourceTree = "<group>"; };
 		9856687389FBB8FA378600DF /* Pods_AlamofireWithCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireWithCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14296081FD59ADA00244701 /* Router+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Router+Extension.swift"; sourceTree = "<group>"; };
+		A14296091FD59ADA00244701 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A142960B1FD59ADA00244701 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A17D5D051FD58DDE00402D0B /* AlamofireWithCodable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireWithCodable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17D5D081FD58DDE00402D0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A17D5D0A1FD58DDE00402D0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A14296071FD59ADA00244701 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A14296081FD59ADA00244701 /* Router+Extension.swift */,
+				A14296091FD59ADA00244701 /* Router.swift */,
+				A142960A1FD59ADA00244701 /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A142960A1FD59ADA00244701 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A142960B1FD59ADA00244701 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A17D5CFC1FD58DDE00402D0B = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +102,7 @@
 		A17D5D071FD58DDE00402D0B /* AlamofireWithCodable */ = {
 			isa = PBXGroup;
 			children = (
+				A14296071FD59ADA00244701 /* API */,
 				A17D5D081FD58DDE00402D0B /* AppDelegate.swift */,
 				A17D5D0A1FD58DDE00402D0B /* ViewController.swift */,
 				A17D5D0C1FD58DDE00402D0B /* Main.storyboard */,
@@ -217,7 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A142960C1FD59ADA00244701 /* Router+Extension.swift in Sources */,
 				A17D5D0B1FD58DDE00402D0B /* ViewController.swift in Sources */,
+				A142960D1FD59ADA00244701 /* Router.swift in Sources */,
+				A142960E1FD59ADA00244701 /* Model.swift in Sources */,
 				A17D5D091FD58DDE00402D0B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

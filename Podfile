@@ -6,5 +6,5 @@ target 'AlamofireWithCodable' do
   use_frameworks!
 
   # Pods for AlamofireWithCodable
-
+  pod 'Alamofire', '~> 4.5'
 end

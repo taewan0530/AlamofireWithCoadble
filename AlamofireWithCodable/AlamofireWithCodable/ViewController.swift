@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+  
+    }
+
+    private func example() {
         // A Type
         // import Alamofire 필요함 Result 사용하기 위해서
         Router.restaurant
@@ -21,9 +25,9 @@ class ViewController: UIViewController {
             .responseCodable { (result: Result<Model.Restaurant>) in
                 switch result {
                 case .failure(let error):
-                    break
+                    print(error)
                 case .success(let value):
-                    break
+                    print(value)
                 }
         }
         
@@ -34,18 +38,24 @@ class ViewController: UIViewController {
             .responseCodable(Model.Restaurant.self) { result in
                 switch result {
                 case .failure(let error):
-                    break
+                    print(error)
                 case .success(let value):
-                    break
+                    print(value)
+                }
+        }
+        
+        // 리스트는 이런 식으로 호출
+        Router.restaurant
+            .request()
+            .responseCodable([Model.Restaurant].self) { result in
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success(let value):
+                    print(value)
                 }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

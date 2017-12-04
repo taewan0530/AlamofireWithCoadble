@@ -15,22 +15,19 @@ extension DataRequest {
     @discardableResult
     public func responseCodable<T: Codable>(_ type: T.Type = T.self, queue: DispatchQueue? = nil, jsonDecoder: JSONDecoder = JSONDecoder(), completionHandler: @escaping (Result<T>) -> Void) -> DataRequest {
         return self.responseData(queue: queue) { 
-            let result: Result<T>
-
             switch $0.result {
             case .failure(let error):
-                result = .failure(error)
+                completionHandler(.failure(error))
             case .success(let data):
                 do {
                     let decodedData = try jsonDecoder.decode(T.self, from: data)
-                    result = .success(decodedData)
+                    completionHandler(.success(decodedData))
                 } catch(let error) {
                     // 디코딩 실패!
                     assertionFailure(error.localizedDescription)
-                    result = .failure(error)
+                    completionHandler(.failure(error))
                 }
-            }
-            completionHandler(result)
+            }// switch
         }
     }
 }

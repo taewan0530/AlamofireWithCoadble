@@ -14,7 +14,7 @@ extension DataRequest {
   
     @discardableResult
     public func responseCodable<T: Codable>(_ type: T.Type = T.self, queue: DispatchQueue? = nil, jsonDecoder: JSONDecoder = JSONDecoder(), completionHandler: @escaping (Result<T>) -> Void) -> DataRequest {
-        return self.responseData { 
+        return self.responseData(queue: queue) { 
             let result: Result<T>
 
             switch $0.result {

@@ -15,15 +15,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // A Type
-        // import Alamofire 필요함
-        Router.restaurant.responseCodable { (response: DataResponse<Model.Restaurant>) in
-            
+        // import Alamofire 필요함 Result 사용하기 위해서
+        Router.restaurant
+            .request()
+            .responseCodable { (result: Result<Model.Restaurant>) in
+                switch result {
+                case .failure(let error):
+                    break
+                case .success(let value):
+                    break
+                }
         }
         
         // B Type
         // import Alamofire 필요 없음
-        Router.restaurant.responseCodable(Model.Restaurant.self) { response in
-            
+        Router.restaurant
+            .request()
+            .responseCodable(Model.Restaurant.self) { result in
+                switch result {
+                case .failure(let error):
+                    break
+                case .success(let value):
+                    break
+                }
         }
     }
 

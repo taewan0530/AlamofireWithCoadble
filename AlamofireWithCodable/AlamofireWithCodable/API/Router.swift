@@ -45,6 +45,10 @@ enum Router {
 
 
 extension Router: URLRequestConvertible {
+    func request() -> DataRequest {
+        return Alamofire.request(self)
+    }
+    
     func asURLRequest() throws -> URLRequest {
         let url = try Router.baseURLString.asURL()
         
